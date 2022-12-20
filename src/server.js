@@ -1,3 +1,4 @@
-const app = require('./');
+const app = require('./index');
 
-app.listen(3333);
+const port = 3333;
+app.listen(port, () => console.log(`App rodando na porta ${port}`));
