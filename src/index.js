@@ -73,7 +73,7 @@ app.put("/todos/:id", checksExistsUserAccount, (request, response) => {
   const userToDo = user.todos.filter((todo) => todo.id === id)[0];
 
   if (!userToDo) {
-    return response.status(404).json({ error: "User not found" });
+    return response.status(404).json({ error: "Todo not found" });
   }
 
   userToDo.title = title ?? userToDo.title;
